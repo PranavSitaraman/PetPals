@@ -1,0 +1,51 @@
+﻿@page "/transportation"
+@using ProjectPet.Data
+@inject IJSRuntime Js;
+<NavMenu Title="@Title" />
+<section style="padding:0px"/>
+<section style="padding:0px">
+@if (_lat != null && _lon != null)
+{
+    <ActionMenu Lat="@((double)_lat)" Lon="@((double)_lon)" CloseCallback="@CloseActionMenu" />
+}
+<MapComponent ViewDetailsCallback="@ViewDetails" OnLongPressAsync="@ShowLongPressMenu" />
+@if (_details != null)
+{
+    <EventView Loc="@_currentPins[(Guid)_details]" CloseCallback="@CloseDetailsView"/>
+}
+</section>
+<section/>
+@code
+{
+    private string Title = "Transportation";
+    public static Dictionary<Guid, Pin> _currentPins = new();
+    private Double? _lat;
+    private Double? _lon;
+    private Guid? _details;
+    private async Task CloseActionMenu()
+    {
+        await Js.InvokeVoidAsync("removeLongPressIndicator");
+        _lat = null;
+        _lon = null;
+        StateHasChanged();
+    }
+    private void CloseDetailsView()
+    {
+        _details = null;
+        StateHasChanged();
+    }
+    private async Task ViewDetails(Guid id)
+    {
+        _details = null;
+        StateHasChanged();
+        _details = id;
+        StateHasChanged();
+    }
+    private async Task ShowLongPressMenu(double lat, double lon)
+    {
+        _lat = lat;
+        _lon = lon;
+        await Js.InvokeVoidAsync("placeLongPressIndicator", lat, lon);
+        StateHasChanged();
+    }
+}

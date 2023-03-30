@@ -1,0 +1,55 @@
+﻿<div class="@NavMenuCssClass">
+	<nav class="navbar navbar-dark">
+		<div class="container-fluid" style="color:white;">
+			<a class="nav-item navbar-brand navbar-top" href="/home">
+				<img src="img/ProjectPet-transparent.png" alt="ProjectPet" style="height:50px"/>
+			</a>
+			<h3>@Title</h3>
+			<a class="nav-item navbar-toggler" href="profile" style="margin-left:10px;">
+				<span class="oi oi-person"></span>
+			</a>
+		</div>
+	</nav>
+</div>
+<div class="@NavMenuCssClass">
+	<nav class="navbar navbar-dark fixed-bottom">
+		<div class="container-fluid" style="max-width:800px;">
+			<div class="nav-item">
+				<NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-house" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+			<div class="nav-item">
+				<NavLink class="nav-link" href="calendar" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-calendar-days" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+			<div class="nav-item">
+				<NavLink class="nav-link" href="photos" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-image" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+			<div class="nav-item">
+				<NavLink class="nav-link" href="athletics" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-football" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+			<div class="nav-item">
+				<NavLink class="nav-link" href="gradebook" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-graduation-cap" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+			<div class="nav-item">
+				<NavLink class="nav-link" href="transportation" Match="NavLinkMatch.All">
+					<span class="fa fa-solid fa-car" aria-hidden="true"></span>
+				</NavLink>
+			</div>
+		</div>
+	</nav>
+</div>
+@code
+{
+	private static bool collapseNavMenu = false;
+	private static string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+	[Parameter] public string Title { get; set; }
+}

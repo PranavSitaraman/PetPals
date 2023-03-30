@@ -1,0 +1,123 @@
+﻿@page "/register"
+@inject NavigationManager NavigationManager;
+@using System.Net
+@using Microsoft.Extensions.Primitives
+@using System.ComponentModel.DataAnnotations
+@using System.Net.Http.Headers
+@using System.Collections.Generic
+@using System.IO;
+@using Newtonsoft.Json
+@using System.Reflection
+@using ProjectPet.Data
+@code
+{
+	public string confirmpass;
+	public enum AccountType
+	{
+		Student,
+		Parent,
+		Staff,
+		Administrator
+	}
+	public class UserModel
+	{
+		public int Id { get; set; }
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public string Email { get; set; }
+		public string Password { get; set; }
+		public string Institution { get; set; }
+		public AccountType Role { get; set; } = AccountType.Student;
+		public bool Agreed { get; set; }
+	}
+}
+<section>
+	<div class="form-outer">
+		<img src="img/ProjectPet-transparent.png" />
+		<EditForm Model="@Model" OnValidSubmit="@Submit">
+			<DataAnnotationsValidator />
+			<div>
+				<label class="form-label">First Name</label>
+				<div>
+					<InputText type="text" class="form-control" placeholder="John" @bind-Value="Model.FirstName" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Last Name</label>
+				<div>
+					<InputText type="text" class="form-control" placeholder="Doe" @bind-Value="Model.LastName" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Role</label>
+				<div>
+					<InputSelectEnum class="form-select" @bind-Value="Model.Role" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Institution</label>
+				<div>
+					<InputText type="text" class="form-control" placeholder="ProjectPet" @bind-Value="Model.Institution" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Email</label>
+				<div>
+					<InputText type="email" class="form-control" placeholder="demo@ProjectPet.org" @bind-Value="Model.Email" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Password</label>
+				<div>
+					<InputText type="password" class="form-control" placeholder="password" @bind-Value="Model.Password" />
+				</div>
+			</div>
+			<div class="form-input">
+				<label class="form-label">Confirm Password</label>
+				<div>
+					<InputText type="password" class="form-control" placeholder="confirm password" @bind-Value="confirmpass" />
+				</div>
+			</div>
+			<ValidationSummary />
+			@if (!String.IsNullOrEmpty(resultMessage))
+			{
+				<div class="form-error-message">@resultMessage</div>
+			}
+			<div class="row pt-4">
+				<div class="col d-flex justify-content-center">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" @bind-value="Model.Agreed" />
+					</div>
+					<label class="form-check-label">I accept the <a href="/terms-conditions/register">terms of use</a></label>
+				</div>
+			</div>
+			<div class="col d-flex justify-content-center">
+				<button type="submit" class="btn my-4">Register</button>
+			</div>
+			<div class="text-center">
+				<p>Already have an account? <a href="/login">Login</a></p>
+			</div>
+		</EditForm>
+	</div>
+</section>
+@code
+{
+	private UserModel Model = new();
+	private string resultMessage;
+	public bool ValidModel(UserModel m)
+	{
+		return !m.Agreed || m.FirstName == null || m.LastName == null || m.Email == null || m.Password == null || m.Password != confirmpass;
+	}
+	private async void Submit()
+	{
+		if (ValidModel(Model)) resultMessage = "Please enter valid credentials!";
+		else
+		{
+			resultMessage = "Your credentials will be verified and authorized shortly. Please check back in 24-72 hours!";
+			StateHasChanged();
+			await Task.Delay(2500);
+			NavigationManager.NavigateTo("/login");
+		}
+		StateHasChanged();
+	}
+}
