@@ -57,12 +57,10 @@
 {
 	private LoginModel Model = new();
 	private string resultMessage;
-	private int poop;
-	private List<Tuple<string, string>> logins = new();
+	public static List<Tuple<string, string>> logins = new();
 	protected async override void OnInitialized()
 	{
 		await ReadUsers();
-		poop = logins.Count();
 	}
 	private async Task ReadUsers()
 	{

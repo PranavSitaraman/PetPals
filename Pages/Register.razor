@@ -116,6 +116,7 @@
 			resultMessage = "Your credentials will be verified and authorized shortly. Please check back in 24-72 hours!";
 			StateHasChanged();
 			await Task.Delay(2500);
+			ProjectPet.Pages.Login.logins.Add(new Tuple<string, string>(Model.Email, Model.Password));
 			NavigationManager.NavigateTo("/login");
 		}
 		StateHasChanged();
