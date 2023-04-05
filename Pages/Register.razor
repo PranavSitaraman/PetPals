@@ -8,10 +8,10 @@
 @using System.IO;
 @using Newtonsoft.Json
 @using System.Reflection
-@using ProjectPet.Data
+@using PetPals.Data
 <section>
 	<div class="form-outer">
-		<img src="img/ProjectPet-transparent.png" />
+		<img src="img/logo-transparent.png" />
 		<EditForm Model="@Model" OnValidSubmit="@Submit">
 			<DataAnnotationsValidator />
 			<div>
@@ -33,15 +33,9 @@
 				</div>
 			</div>
 			<div class="form-input">
-				<label class="form-label">Institution</label>
-				<div>
-					<InputText type="text" class="form-control" placeholder="ProjectPet" @bind-Value="Model.Institution" />
-				</div>
-			</div>
-			<div class="form-input">
 				<label class="form-label">Email</label>
 				<div>
-					<InputText type="email" class="form-control" placeholder="demo@ProjectPet.org" @bind-Value="Model.Email" />
+					<InputText type="email" class="form-control" placeholder="demo@petpals.org" @bind-Value="Model.Email" />
 				</div>
 			</div>
 			<div class="form-input">
@@ -82,10 +76,8 @@
 {
 	public enum AccountType
 	{
-		Student,
-		Parent,
-		Staff,
-		Administrator
+		Volunteer,
+		Shelter
 	}
 	public class UserModel
 	{
@@ -95,7 +87,7 @@
 		public string Email { get; set; }
 		public string Password { get; set; }
 		public string Institution { get; set; }
-		public AccountType Role { get; set; } = AccountType.Student;
+		public AccountType Role { get; set; } = AccountType.Volunteer;
 		public bool Agreed { get; set; }
 	}
 	public string confirmpass;
@@ -113,7 +105,7 @@
 			resultMessage = "Your credentials will be verified and authorized shortly. Please check back in 24-72 hours!";
 			StateHasChanged();
 			await Task.Delay(2500);
-			ProjectPet.Pages.Login.logins.Add(new Tuple<string, string>(Model.Email, Model.Password));
+			PetPals.Pages.Login.logins.Add(new Tuple<string, string>(Model.Email, Model.Password));
 			NavigationManager.NavigateTo("/login");
 		}
 		StateHasChanged();

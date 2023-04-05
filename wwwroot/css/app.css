@@ -156,9 +156,8 @@ a, .btn-link
     {
         background-color: #C64426;
     }
-    50%, 100%
-    {
-        background-color: rgba(166, 38, 57, 0.3);
+    50%, 100% {
+        background-color: rgba(198, 68, 38, 0.3);
     }
 }
 .modal-create-pin

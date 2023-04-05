@@ -1,6 +1,6 @@
 ﻿@using System.Web
 @using System.ComponentModel.DataAnnotations
-@using ProjectPet.Data
+@using PetPals.Data
 @inject NavigationManager NavigationManager;
 @inject IJSRuntime Js;
 <div style="padding:20px" class="d-flex justify-content-center">
@@ -75,7 +75,7 @@
             _model.Lon = Lon;
             _model.Kind = PinKind.Car;
             _model.Time = (_expiresdate + _expirestime).ToString("MM/dd hh:mm tt");
-            ProjectPet.Pages.Transportation._currentPins.Add(_model.Id, _model);
+            PetPals.Pages.Transportation._currentPins.Add(_model.Id, _model);
             await Js.InvokeVoidAsync("placePin", _model);
             _model = new();
             await Task.Delay(2000);

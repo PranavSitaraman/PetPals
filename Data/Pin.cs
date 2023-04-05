@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace ProjectPet.Data
+namespace PetPals.Data
 {
     public record Pin
     {

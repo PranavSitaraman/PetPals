@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ProjectPet;
+namespace PetPals;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

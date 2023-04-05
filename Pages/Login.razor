@@ -12,16 +12,15 @@
 		public bool ModelsIsNull() { return Email == null || Password == null; }
 	}
 }
-<section />
 <section>
 	<form class="form-outer">
-		<img src="img/ProjectPet-transparent.png" />
+		<img src="img/logo-transparent.png" />
 		<EditForm Model="@Model" OnValidSubmit="@Submit">
 			<DataAnnotationsValidator />
 			<div>
 				<label class="form-label">Email</label>
 				<div>
-					<InputText id="email" type="email" class="form-control" placeholder="demo@ProjectPet.org" @bind-Value="Model.Email" />
+					<InputText id="email" type="email" class="form-control" placeholder="demo@petpals.org" @bind-Value="Model.Email" />
 				</div>
 			</div>
 			<div>
@@ -47,12 +46,11 @@
 				<button type="submit" class="btn mb-4">Sign In</button>
 			</div>
 			<div class="text-center">
-				<p>New to ProjectPet? <a href="/register">Register</a></p>
+				<p>New to PetPals? <a href="/register">Register</a></p>
 			</div>
 		</EditForm>
 	</form>
 </section>
-<section/>
 @code
 {
 	private LoginModel Model = new();
@@ -68,7 +66,7 @@
 		using (var reader = new StreamReader(stream))
 		{
 			var json = await reader.ReadToEndAsync();
-			var users = JsonConvert.DeserializeObject<List<ProjectPet.Pages.Register.UserModel>>(json);
+			var users = JsonConvert.DeserializeObject<List<PetPals.Pages.Register.UserModel>>(json);
 			foreach (var u in users)
 			{
 				logins.Add(new Tuple<string, string>(u.Email, u.Password));

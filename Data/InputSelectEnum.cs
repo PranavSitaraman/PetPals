@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
 using Humanizer;
-namespace ProjectPet.Data
+namespace PetPals.Data
 {
     public sealed class InputSelectEnum<TEnum> : InputBase<TEnum>
     {

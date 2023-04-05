@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ProjectPet;
+namespace PetPals;
 
 public class Program
 {

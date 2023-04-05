@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ProjectPet;
+namespace PetPals;
 
 [Application]
 public class MainApplication : MauiApplication

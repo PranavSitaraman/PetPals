@@ -1,4 +1,4 @@
-﻿namespace ProjectPet;
+﻿namespace PetPals;
 public partial class App : Application
 {
 	public App()

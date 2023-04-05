@@ -1,5 +1,5 @@
 ﻿@page "/transportation"
-@using ProjectPet.Data
+@using PetPals.Data
 @inject IJSRuntime Js;
 <NavMenu Title="@Title" />
 <section style="padding:0px"/>
@@ -14,7 +14,6 @@
     <EventView Loc="@_currentPins[(Guid)_details]" CloseCallback="@CloseDetailsView"/>
 }
 </section>
-<section/>
 @code
 {
     private string Title = "Search & Rescue";

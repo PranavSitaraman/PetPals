@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using ProjectPet.Data;
+using PetPals.Data;
 using CommunityToolkit.Maui;
 using Blazored.Modal;
-namespace ProjectPet;
+namespace PetPals;
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
