@@ -9,28 +9,6 @@
 @using Newtonsoft.Json
 @using System.Reflection
 @using ProjectPet.Data
-@code
-{
-	public string confirmpass;
-	public enum AccountType
-	{
-		Student,
-		Parent,
-		Staff,
-		Administrator
-	}
-	public class UserModel
-	{
-		public int Id { get; set; }
-		public string FirstName { get; set; }
-		public string LastName { get; set; }
-		public string Email { get; set; }
-		public string Password { get; set; }
-		public string Institution { get; set; }
-		public AccountType Role { get; set; } = AccountType.Student;
-		public bool Agreed { get; set; }
-	}
-}
 <section>
 	<div class="form-outer">
 		<img src="img/ProjectPet-transparent.png" />
@@ -102,6 +80,25 @@
 </section>
 @code
 {
+	public enum AccountType
+	{
+		Student,
+		Parent,
+		Staff,
+		Administrator
+	}
+	public class UserModel
+	{
+		public int Id { get; set; }
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public string Email { get; set; }
+		public string Password { get; set; }
+		public string Institution { get; set; }
+		public AccountType Role { get; set; } = AccountType.Student;
+		public bool Agreed { get; set; }
+	}
+	public string confirmpass;
 	private UserModel Model = new();
 	private string resultMessage;
 	public bool ValidModel(UserModel m)

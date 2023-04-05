@@ -1,6 +1,5 @@
-.navbar
-{
-    background-color: #A62639;
+.navbar {
+    background-color: #C0392B;
 }
 .navbar-toggler
 {
@@ -23,7 +22,7 @@
 }
 .nav-item ::deep a
 {
-    color: #d7d7d7;
+    color: #FFD99C;
     border-radius: 4px;
     height: 3rem;
     display: flex;

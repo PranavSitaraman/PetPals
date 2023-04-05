@@ -116,8 +116,8 @@ a, .btn-link
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #A62639;
-    color: #A62639;
+    background-color: #C64426;
+    color: #C64426;
     animation: dot-flashing 0.25s infinite linear alternate;
     animation-delay: 0.125s;
 }
@@ -134,8 +134,8 @@ a, .btn-link
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #A62639;
-    color: #A62639;
+    background-color: #C64426;
+    color: #C64426;
     animation: dot-flashing 0.25s infinite alternate;
     animation-delay: 0s;
 }
@@ -145,8 +145,8 @@ a, .btn-link
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #A62639;
-    color: #A62639;
+    background-color: #C64426;
+    color: #C64426;
     animation: dot-flashing 0.25s infinite alternate;
     animation-delay: 0.25s;
 }
@@ -154,7 +154,7 @@ a, .btn-link
 {
     0%
     {
-        background-color: #A62639;
+        background-color: #C64426;
     }
     50%, 100%
     {
@@ -205,7 +205,7 @@ a, .btn-link
 }
 .modal-create-pin form div:not(div:nth-last-child(1))
 {
-    border-bottom: 1px #effdea solid;
+    border-bottom: 1px #FFD99C solid;
 }
 .modal-create-pin form input, .modal-create-pin form select, .modal-create-pin form textarea
 {
@@ -222,8 +222,8 @@ a, .btn-link
     font-size: 1em;
     padding: 5px;
     font-family: var(--font-primary);
-    border: 1px black dotted;
-    background-color: #baf4a6;
+    border: 1px #3D1E22 dotted;
+    background-color: #FAB773;
 }
 .modal-create-pin form .file-upload input[type=file]
 {
@@ -248,7 +248,7 @@ a, .btn-link
     top: 0;
     left: 0;
     transform: translate(-50%, -100%);
-    background-color: #e66c7e;
+    background-color: #FAB773;
     padding: 5px;
     border-radius: 5px;
     font-family: sans-serif;
@@ -279,7 +279,7 @@ a, .btn-link
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #e66c7e;
+    border-top: 8px solid #FAB773;
 }
 .popup-container
 {
@@ -297,7 +297,7 @@ a, .btn-link
     float: right;
     border-top: thick groove white;
     max-height: 100vh;
-    background-color: #e66c7e;
+    background-color: #FAB773;
     z-index: 10;
     border-radius: 30px 30px 0 0;
 }

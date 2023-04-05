@@ -40,6 +40,8 @@
 <NavMenu Title="@Title" />
 <section/>
 <section>
+<div class="d-flex justify-content-left">
+	<div style="width:60%;margin-left:30px;">
 	<div class="d-flex justify-content-center" style="padding-bottom: 1em">
 		<button class="btn month-nav" @onclick="PrevMonth">&lt;</button>
 		<h3 class="align-middle">@CurrentMonth.ToString("MMMM yyyy")</h3>
@@ -60,7 +62,7 @@
 				<tr>
 					@foreach (var day in week.Days)
 					{
-						<td scope="row" @onclick="()=>ToggleDay(day)" style="background-color:@(day.Equals(selectedDay) ? "rgba(219, 50, 77, 0.2)" : "")">
+						<td scope="row" @onclick="()=>ToggleDay(day)" style="background-color:@(day.Equals(selectedDay) ? "rgba(238, 132, 84, 0.2)" : "")">
 							<div class="@(day.IsCurrentMonth ? "day-header" : "text-muted")">@day.day</div>
 							<ul class="d-flex flex-row">
 								@foreach (var e in GetEvents(day.date))
@@ -74,6 +76,8 @@
 			}
 		</tbody>
 	</table>
+	</div>
+	<div style="width:30%;margin-left:30px;">
 	@if (selectedDay != null)
 	{
 		<div class="selected container-fluid">
@@ -93,10 +97,12 @@
 				{
 					<div class="col container-fluid">
 						<div class="row container-fluid">
+							<h4><strong></strong></h4>
 							<h4><strong>@selectedEvent.title</strong></h4>
 							<h6>@selectedEvent.description</h6>
 							<h6><strong>Start: </strong>@selectedEvent.start.ToString("hh:mm tt")</h6>
 							<h6><strong>End: </strong>@selectedEvent.end.ToString("hh:mm tt")</h6>
+							<h4><strong></strong></h4>
 						</div>
 					</div>
 				}
@@ -111,17 +117,20 @@
 			</div>
 			<hr>
 			<div class="row justify-content-center mb-4">
-				<button class="btn active w-25" @onclick="OpenPopup">Add Event</button>
+				<button class="btn active w-25" @onclick="OpenPopup">@returnString</button>
 			</div>
 			<br/>
 			<br/>
 		</div>
 	}
+	</div>
+</div>
 </section>
 <section/>
 @code
 {
-	private string Title = "Calendar";
+	private string Title = "Volunteering Calendar";
+	private string returnString = "Sign Up";
 	private DateTime CurrentMonth = DateTime.Today;
 	private List<Week> Weeks = new();
 	private bool DayExpand;
@@ -200,11 +209,8 @@
 	}
 	private void OpenPopup()
 	{
-		popupDisplay = "block";
-	}
-	private void ClosePopup()
-	{
-		popupDisplay = "none";
+		if (returnString.Equals("Sign Up")) returnString = "Cancel Signup";
+		else returnString = "Sign Up";
 	}
 	private List<Event> GetEvents(DateTime date)
 	{

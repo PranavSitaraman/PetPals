@@ -61,12 +61,14 @@
 
     <ItemGroup>
       <None Remove="Pages\ActionMenu.razor.css" />
+      <None Remove="Pages\Athletics.razor.css" />
       <None Remove="Pages\Login.razor.css" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="Data\InputSelectEnum.cs" />
       <Content Include="Pages\ActionMenu.razor.css" />
+      <Content Include="Pages\Athletics.razor.css" />
       <Content Include="Pages\Login.razor.css" />
       <Content Include="Data\Pin.cs" />
     </ItemGroup>

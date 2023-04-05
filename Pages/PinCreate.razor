@@ -12,8 +12,15 @@
         </div>
         <br />
         <div>
-            <label>Grade: </label>
-            <InputSelectEnum @bind-Value="_model.Class" />
+            <label>Description: </label>
+            <br />
+            <InputText style="height:75px;" @bind-Value="_model.Desc" />
+        </div>
+        <br />
+        <div>
+            <label class="file-upload" style="width:150px">Upload Image:</label>
+            <br />
+            <InputFile style="width:150px" />
         </div>
         <br />
         <div>
@@ -55,7 +62,7 @@
     [Parameter] public double Lat { get; set; }
     [Parameter] public double Lon { get; set; }
     private DateTime _expiresdate = DateTime.Now.Date;
-    public TimeSpan _expirestime = TimeSpan.FromHours(16.5);
+    public TimeSpan _expirestime = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
     public Pin _model = new();
     private async Task Submit()
     {

@@ -7,7 +7,7 @@ namespace ProjectPet.Data
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Grade Class { get; set; }
+        public string Desc { get; set; }
         public double Lat { get; set; }
         public double Lon { get; set; }
         public string Time { get; set; }
@@ -16,13 +16,6 @@ namespace ProjectPet.Data
     }
     public enum PinKind
     {
-        [Display(Name="Car")] Car
-    }
-    public enum Grade
-    {
-        [Display(Name = "Freshman")] Freshman,
-        [Display(Name = "Sophomore")] Sophomore,
-        [Display(Name = "Junior")] Junior,
-        [Display(Name = "Senior")] Senior
+        [Display(Name = "Car")] Car
     }
 }

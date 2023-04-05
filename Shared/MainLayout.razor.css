@@ -10,11 +10,11 @@ main
 }
 .sidebar
 {
-    background-color: #A62639;
+    background-color: #C64426;
 }
 .top-row
 {
-    background-color: #A62639;
+    background-color: #C64426;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;

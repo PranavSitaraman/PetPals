@@ -1,6 +1,6 @@
 ﻿section
 {
-    color: #A62639;
+    color: #C64426;
 }
 .form-outer
 {
@@ -18,7 +18,7 @@ img
 {
     padding-top: 10%;
     font-weight: bold;
-    border-color: #A62639;
+    border-color: #C64426;
 }
 .form-control
 {
@@ -26,11 +26,11 @@ img
 }
 form-check-input, .form-check-input:checked
 {
-    background-color: #A62639;
+    background-color: #C64426;
 }
 .form-check-input
 {
-    border-color: #A62639;
+    border-color: #C64426;
 }
 .form-error-message
 {
@@ -40,7 +40,7 @@ form-check-input, .form-check-input:checked
 }
 .btn
 {
-    background-color: #A62639;
+    background-color: #C64426;
     color: white;
     min-width: 100px;
     width: 25%;
