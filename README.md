@@ -1,22 +1,22 @@
-# PetPals Introduction
+# Introduction
 
-
-PetPals is a mobile application intended to help parents and the community stay up-to-date with important information and upcoming events related to the School. This document will serve as your guide to using PetPals, outlining the features and navigation integrated into the application
+PetPals is a mobile application designed to help pet rescue organizations get off to a good start. This document serves as a guide to using the PetPals app and outlines the features and navigation integrated into the application.
 
 # Navigation
 
-1. **Home**: The Home button on the navigation bar will take you back to the main screen of the application, which serves as the starting point for accessing all other features and functionalities.
+1. **Home**: The Home button on the navigation bar takes users back to the main screen of the application, serving as the starting point for accessing all other features and functionalities.
 
-2. **Calendar**: The Calendar button on the navigation bar will provide you with access to the school calendar, which will include important dates such as holidays, school events, and other activities.
+2. **Pet Listings**: The Pet Listings button on the navigation bar provides users with access to photos and brief descriptions of 10 pets available for adoption. Users can filter by type of animal, breed, age, and location.
 
-3. **Photos**: The Photos button on the navigation bar will allow you to view and share photos related to the School. This feature will enable teachers and students to upload and share photos from school activities, events, and other important moments.
+3. **Pet Details**: When users click on a specific pet, they will be taken to a screen that includes more detailed information about the animal, such as its personality, medical history, and any special needs. This screen will also include buttons to adopt or foster the pet, as well as options to share the pet's profile on social media.
 
-4. **Athletics**: The Athletics button on the navigation bar will provide you with information related to sports activities and events happening at the school. This feature will include schedules, results, and other related information.
+4. **Donations**: The Donations button on the navigation bar includes information about the organization's fundraising efforts and a link to make a donation. Users can choose from different donation amounts and payment options.
 
-5. **Gradebook**: The Gradebook button on the navigation bar will provide parents with access to their child's academic performance and progress. This feature will allow parents to view grades, assignments, and other related information.
+5. **Volunteer**: The Volunteer button on the navigation bar includes information about volunteering opportunities, such as event planning, fundraising, social media management, and animal care. Users can fill out a volunteer application directly within the app.
 
-6. **Transportation**: The Transportation button on the navigation bar will provide information related to school transportation services, including bus schedules, pick-up/drop-off locations, and other relevant details.
+6. **Search & Rescue**: The Search & Rescue button on the navigation bar allows users to report stray animal sightings by placing a pin on a map, attach key information, and conveys this information to local shelters.
 
+7. **Contact**: The Contact button on the profile page includes the organization's contact information, including its phone number, email address, and physical address. Users can also submit a contact form directly within the app.
 
 # Installing the Application
 
@@ -31,4 +31,4 @@ The Creative Commons license for the application is an Attribution-NonCommercial
 All of the icons used in the app are from Font Awesome, a General Purpose License friendly database of commercially available icons. As well as this, all of the Mud Blazor Components used in our application are open source and free for commercial use.
 
 # App Project Description
-PetPals was made to facilitate the process of communication between the school and the community. The application consists of a collaborative calendar, method of sharing photos, information relating to sports activities, an integrated gradebook, and an interdependent transportation system for students to use together. The application was made using Blazor,  a framework feature of ASP.NET for building interactive web UIs using C#. The differing pieces of code were written on Visual Studio and brought together using GitHub. The application was made to account for different devices, platforms, and capabilities, while integrating most of the features inside of the app → Social Media, Gradebook, Transportation. In the end, we created an application that could be used by students, teachers, and school administration all around the world to better the process of communication. 
+PetPals is a mobile application designed to help new pet rescue organizations get off to a good start. The app features six main navigation buttons, including Home, Pet Listings, Pet Details, Donations, Volunteer, and Search & Rescue. It was developed using Blazor, a framework feature of ASP.NET for building interactive web UIs using C#, and the differing pieces of code were written on Visual Studio and brought together using GitHub. The app was made to account for different devices, platforms, and capabilities, while integrating most of the features inside of the app, such as social media sharing, a gradebook, and a transportation system for pets. With PetPals, users can easily browse pet listings, learn more about individual animals, donate to the organization, volunteer, and get in touch with the organization. The app was designed to be used by pet rescue organizations all around the world to better the process of communication and streamline the pet adoption process.

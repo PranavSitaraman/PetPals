@@ -1,7 +1,6 @@
-﻿.btn
-{
+﻿.btn {
     background-color: #C64426;
-    color: white;
+    color: #FFD99C;
     min-width: 100px;
     width: 10%;
 }

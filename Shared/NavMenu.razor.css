@@ -1,41 +1,41 @@
 .navbar {
     background-color: #C0392B;
 }
-.navbar-toggler
-{
+
+.navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }
-.navbar-brand
-{
+
+.navbar-brand {
     font-size: 1.1rem;
 }
-.fa, .oi
-{
+
+.fa, .oi {
     font-size: 1.5rem;
     vertical-align: text-top;
     top: -2px;
 }
-.nav-item
-{
+
+.nav-item {
     font-size: 0.9rem;
     padding: 0.5rem;
 }
-.nav-item ::deep a
-{
-    color: #FFD99C;
-    border-radius: 4px;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    line-height: 3rem;
-}
-.nav-item ::deep a.active
-{
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
-.nav-item ::deep a:hover
-{
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+
+    .nav-item ::deep a {
+        color: #FFD99C;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+        .nav-item ::deep a.active {
+            background-color: rgba(255, 217, 156, 0.25);
+            color: #FFD99C;
+        }
+
+        .nav-item ::deep a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #FFD99C;
+        }

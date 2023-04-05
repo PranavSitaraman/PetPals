@@ -16,7 +16,7 @@
     "Email": "alex@petpals.org",
     "Password": "alex",
     "Institution": "PetPals",
-    "Role": 1,
+    "Role": 0,
     "Agreed": true
   },
   {
@@ -26,7 +26,7 @@
     "Email": "trevor@petpals.org",
     "Password": "trevor",
     "Institution": "PetPals",
-    "Role": 2,
+    "Role": 0,
     "Agreed": true
   },
   {
@@ -36,7 +36,7 @@
     "Email": "rube@petpals.org",
     "Password": "rube",
     "Institution": "PetPals",
-    "Role": 3,
+    "Role": 0,
     "Agreed": true
   },
   {
@@ -46,7 +46,7 @@
     "Email": "jude@petpals.org",
     "Password": "jude",
     "Institution": "PetPals",
-    "Role": 1,
+    "Role": 0,
     "Agreed": true
   }
 ]

@@ -2,11 +2,10 @@
 {
     color: #3D1E22;
 }
-.month-nav
-{
+.month-nav {
     margin: 0 3em;
     padding: 0 1em;
-    color: white;
+    color: #FFD99C;
     background-color: #3D1E22;
 }
 table
@@ -33,22 +32,19 @@ td {
 {
     font-weight: bold;
 }
-.active
-{
-    color: white;
+.active {
+    color: #FFD99C;
     background-color: #C64426;
 }
-.list-group-item
-{
+.list-group-item {
     width: 30vw;
     margin: auto;
-    color: white;
+    color: #FFD99C;
     margin-bottom: 1vh;
 }
-.list-group-item.active
-{
-    border: solid 2px white;
-}
+    .list-group-item.active {
+        border: solid 2px #FFD99C;
+    }
 .event-dot
 {
     border-radius: 50%;
