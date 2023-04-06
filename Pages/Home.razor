@@ -1,8 +1,61 @@
 ﻿@page "/home"
 @inject NavigationManager NavigationManager;
 <NavMenu Title="@Title" />
-<section>
-    <p>add here</p>
+<section style="color: #C64426;">
+    <div style="margin-top:3%;" class="d-flex justify-content-center">
+        <h1>PetPals</h1>
+    </div>
+    <div style="margin-top:3%;" class="d-flex justify-content-center">
+        <img src="img/logo-transparent.png" style="width:25%"/>
+        <img src="img/shelter.jpg" style="width:40%"/>
+    </div>
+    <div style="margin-top:3%;" class="d-flex justify-content-center">
+        <div style="margin-left:40px;margin-right:5%;width:50%">
+            <h3>Contact Info</h3>
+            <br />
+            <h5>
+                <strong>Address:</strong> 123 Main Street, Anytown USA
+                <br />
+                <strong>Phone:</strong> (555) 123-4567
+                <br />
+                <strong>Email:</strong> info@petpals.com
+                <br />
+            </h5>
+            <br />
+            <h4><strong>Staff Contacts:</strong></h4>
+            <h5 style="margin-left: 30px;">
+                <strong>Director:</strong> Sarah Johnson (sarah@petpals.com)
+                <br />
+                <strong>Volunteer Coordinator:</strong> Lisa Smith (lisa@petpals.com)
+                <br />
+                <strong>Adoption Counselor:</strong> David Lee (david@petpals.com)
+            </h5>
+        </div>
+        <div style="margin-left:5%;width:50%;margin-right:40px;">
+            <h3>Important Links</h3>
+            <br />
+            <ul>
+                <li><a href="http://www.petmicrochiplookup.org/default.aspx">AAHA Microchip Lookup</a></li>
+                <li><a href="https://www.heartwormsociety.org/">American Heartworm Society</a></li>
+                <li><a href="https://www.avma.org/">American Veterinary Medical Association</a></li>
+                <li><a href="https://njvma.org/page/UsefulLinks_PetOwners">FDA - Consumer Updates</a></li>
+                <li><a href="https://www.nj.gov/agriculture/divisions/ah/">NJ Department of Agriculture - Animal Health</a></li>
+                <li><a href="https://www.state.nj.us/health/vph/">NJ Department of Health - Veterinary Health</a></li>
+                <li><a href="https://www.njconsumeraffairs.gov/News/Consumer%20Briefs/purchasing-a-pet-new-jerseys-pet-purchase-protection-law.pdf">NJ Pet Purchase Protection Law</a></li>
+                <li><a href="https://www.petsandparasites.org/">Pets & Parasites</a></li>
+                <li><a href="https://www.aphis.usda.gov/aphis/pet-travel/helpful-references/helpful-resources">Pet Travel Resources</a></li>
+                <li><a href="https://www.nj.gov/health/cd/documents/faq/Rabies-New%20FAQ%20logo_Jan2018.pdf">Rabies Facts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-top:3%;margin-bottom:8%" class="d-flex justify-content-center">
+    <h4><strong>Open Timings:</strong></h4>
+    <h5 style="margin-left: 30px;">
+        Monday to Friday: 9am - 5pm
+        <br />
+        Saturday and Sunday: 10am - 4pm
+    </h5>
+    </div>
 </section>
 @code
 {

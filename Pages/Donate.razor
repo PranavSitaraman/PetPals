@@ -1,0 +1,78 @@
+﻿@page "/donate"
+@inject NavigationManager NavigationManager;
+@inject IJSRuntime Js;
+<NavMenu Title="@Title" />
+<section>
+    <div class="d-flex justify-content-center">
+        <img src="img/logo-transparent.png" style="width:200px;" />
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="form-outer" style="border-right-color:black;width:50%;padding:0;margin-left:10%;margin-right:10%">
+            <h2>Monetary Donation</h2>
+            <div style="margin-top:5%">
+                <label>Donation Amount: </label>
+                <br />
+                <br />
+                <input type="number" id="name" />
+            </div>
+            <div style="margin-top:10%" class="form-floating">
+                <textarea class="form-control" id="floatingTextarea" style="height: 200px;width:100%;"></textarea>
+                <label for="floatingTextarea">Leave a message here!</label>
+            </div>
+            <div style="margin-top:5%" class="col d-flex justify-content-center">
+                <button @onclick="Submit" class="btn my-4">Submit</button>
+            </div>
+        </div>
+        <div class="form-outer" style="border-right-color:black;width:50%;padding:0;margin-left:10%;margin-right:10%">
+            <h2>Food Donation</h2>
+            <div style="margin-top:5%">
+                <EditForm Model=donation>
+                <div>
+                    <label>Drop-off Date: </label>
+                    <InputDate @bind-Value="_expiresdate" />
+                </div>
+                <br />
+                <div>
+                    <label>Drop-off Time: </label>
+                    <InputText type="time" @bind-Value="TimeProxy" />
+                </div>
+                </EditForm>
+            </div>
+            <div style="margin-top:10%" class="form-floating">
+                <textarea class="form-control" id="floatingTextarea" style="height: 200px;"></textarea>
+                <label for="floatingTextarea">Describe the food you will be bringing:</label>
+            </div>
+            <div style="margin-top:5%" class="col d-flex justify-content-center">
+                <button @onclick="Submit" class="btn my-4">Submit</button>
+            </div>
+        </div>
+    </div>
+            <div class="d-flex justify-content-center" style="margin-bottom:10%">
+
+    @if (!String.IsNullOrEmpty(resultMessage))
+    {
+            <div class="form-error-message" >@resultMessage</div>
+    }
+    </div>
+
+</section>
+@code
+{
+    private string TimeProxy
+    {
+        get => _expirestime.ToString();
+        set => TimeSpan.TryParse(value, out _expirestime);
+    }
+    private DateTime _expiresdate = DateTime.Now.Date;
+    public TimeSpan _expirestime = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+    private double donation { get; set; } = 0;
+    private string Title = "Donation";
+    private string resultMessage;
+    public async void Submit()
+    {
+        resultMessage = "Thank you for helping to support us!";
+        StateHasChanged();
+        await Task.Delay(2500);
+        NavigationManager.NavigateTo("/home");
+    }
+}

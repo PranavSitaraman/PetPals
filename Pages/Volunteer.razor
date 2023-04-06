@@ -1,4 +1,4 @@
-﻿@page "/calendar"
+﻿@page "/volunteer"
 @using System.Globalization
 @using System.Collections.Generic
 @using System.IO
@@ -41,7 +41,7 @@
 <section>
 <div class="d-flex justify-content-left">
 	<div style="width:60%;margin-left:30px;">
-	<div class="d-flex justify-content-center" style="padding-bottom: 1em">
+	<div class="d-flex justify-content-center" style="padding-top:15px;padding-bottom: 1em">
 		<button class="btn month-nav" @onclick="PrevMonth">&lt;</button>
 		<h3 class="align-middle">@CurrentMonth.ToString("MMMM yyyy")</h3>
 		<button class="btn month-nav" @onclick="NextMonth">&gt;</button>
@@ -81,7 +81,7 @@
 	{
 		<div class="selected container-fluid">
 			<div class="row">
-				<h4 class="text-center">Events on <strong>@(selectedDayTitle)</strong></h4>
+				<h4 class="text-center">Events on<br /><strong>@(selectedDayTitle)</strong></h4>
 			</div>
 			<div class="row my-3">
 				<div class="col container-fluid">

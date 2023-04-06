@@ -75,7 +75,7 @@
             _model.Lon = Lon;
             _model.Kind = PinKind.Car;
             _model.Time = (_expiresdate + _expirestime).ToString("MM/dd hh:mm tt");
-            PetPals.Pages.Transportation._currentPins.Add(_model.Id, _model);
+            PetPals.Pages.Search._currentPins.Add(_model.Id, _model);
             await Js.InvokeVoidAsync("placePin", _model);
             _model = new();
             await Task.Delay(2000);

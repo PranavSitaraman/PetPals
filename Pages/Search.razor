@@ -1,4 +1,4 @@
-﻿@page "/transportation"
+﻿@page "/search"
 @using PetPals.Data
 @inject IJSRuntime Js;
 <NavMenu Title="@Title" />
@@ -8,10 +8,10 @@
 {
     <ActionMenu Lat="@((double)_lat)" Lon="@((double)_lon)" CloseCallback="@CloseActionMenu" />
 }
-<MapComponent ViewDetailsCallback="@ViewDetails" OnLongPressAsync="@ShowLongPressMenu" />
+<Map ViewDetailsCallback="@ViewDetails" OnLongPressAsync="@ShowLongPressMenu" />
 @if (_details != null)
 {
-    <EventView Loc="@_currentPins[(Guid)_details]" CloseCallback="@CloseDetailsView"/>
+    <View Loc="@_currentPins[(Guid)_details]" CloseCallback="@CloseDetailsView"/>
 }
 </section>
 @code
